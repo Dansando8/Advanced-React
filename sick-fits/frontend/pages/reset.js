@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import RequestReset from '../components/RequestReset';
+import Reset from '../components/Reset'
 
 export default function ResetPage() {
   const params = useRouter();
@@ -15,7 +16,7 @@ export default function ResetPage() {
   }
   return (
     <div>
-      <p>RESET YOUR PASSWORD {token}</p>
+      <Reset token={token}/>
     </div>
   );
 }
