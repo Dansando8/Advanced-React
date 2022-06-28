@@ -10,7 +10,7 @@ const ProductStyles = styled.div`
   grid-auto-flow: column;
   min-height: 800px;
   max-width: var(--maxWidth);
-  justify: center; 
+  justify-content: center;
   align-items: top;
   gap: 2rem;
   img {
@@ -37,7 +37,6 @@ const SINGLE_ITEM_QUERY = gql`
 `;
 
 export default function SingleProduct({ id }) {
-  console.log(id);
   const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY, {
     variables: {
       id,
